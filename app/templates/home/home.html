@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <title>PVDetect</title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sty.css') }}">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1"><span
+                            class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <a class="navbar-brand" href="#" style="font-size:22px">PV异常检测</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">主页</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<strong
+                                    class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <a href="#">Something else here</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <form class="form-horizontal" role="login">
+                        <!--登录界面-->
+                        <div class="modal fade" id="modal-container" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true" style="margin-top:150px">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            PVDectect Login
+                                        </h4>
+                                    </div>
+                                    <div class="form-group" style="margin-left:20px;margin-top:20px">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
+                                        <div class="col-sm-8">
+                                            <input type="email" class="form-control" id="inputEmail3"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-left:20px;margin-top:20px">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" class="form-control" id="inputPassword3"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-1 col-sm-10">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"/>记住我</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-1 col-sm-10">
+                                            <button type="submit" class="btn btn-success">登录</button>
+                                            <button class="btn btn-warning col-sm-offset-1" data-dismiss="modal">取消
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--登录界面结束-->
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a id="modal-test" href="detect" role="button" class="btn">测试</a>
+                        </li>
+                        <li>
+                            <a id="modal-764517" href="#modal-container" role="button" class="btn" data-toggle="modal">登录</a>
+                        </li>
+                        <li>
+                            <a href="#modal-container">退出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <div class="jumbotron">
+                <h1>
+                    光伏面板故障检测
+                </h1>
+                <p>
+                    此系统基于生成对抗网络搭建
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="{{ url_for('static',filename='img/show1.jpg') }}"/>
+                        <div class="caption">
+                            <h3>
+                                Thumbnail label
+                            </h3>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            </p>
+                            <p>
+                                <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="{{ url_for('static',filename='img/show2.jpg') }}"/>
+                        <div class="caption">
+                            <h3>
+                                Thumbnail label
+                            </h3>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            </p>
+                            <p>
+                                <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="{{ url_for('static',filename='img/show3.jpg') }}"/>
+                        <div class="caption">
+                            <h3>
+                                Thumbnail label
+                            </h3>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            </p>
+                            <p>
+                                <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--&lt;!&ndash;底部导航栏&ndash;&gt;-->
+            <!--<nav class="navbar navbar-inverse navbar-fixed-bottom"  role="navigation">-->
+                <!--<div class="navbar-header" >-->
+                    <!--<a class="navbar-brand" href="#" style="margin-left:600px;"><p>PVDetect</p></a>-->
+                    <!--<a href="#"style="color:#FF9933"><p style="margin-left:593px;">by heyhuo @2019</p></a>-->
+                <!--</div>-->
+            <!--</nav>-->
+            <!--&lt;!&ndash;底部导航栏结束&ndash;&gt;-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

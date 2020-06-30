@@ -1,0 +1,7 @@
+model_checkpoint_path: "test_15.ckpt"
+all_model_checkpoint_paths: "test_11.ckpt"
+all_model_checkpoint_paths: "test_12.ckpt"
+all_model_checkpoint_paths: "test_13.ckpt"
+all_model_checkpoint_paths: "test_14.ckpt"
+all_model_checkpoint_paths: "test_15.ckpt"
+all_model_checkpoint_paths: "new_model_199.ckpt"

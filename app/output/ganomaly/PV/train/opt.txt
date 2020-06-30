@@ -1,0 +1,45 @@
+------------ Options -------------
+anomaly_class: 9
+batchsize: 64
+beta1: 0.5
+dataset: PV
+device: cpu
+display: False
+display_id: 0
+display_port: 8097
+display_server: http://localhost
+droplast: True
+extralayers: 0
+gpu_ids: [0]
+isTrain: True
+isize: 32
+iter: 0
+load_weights: False
+lr: 0.0002
+manualseed: -1
+metric: roc
+model: ganomaly
+name: ganomaly/PV
+nc: 3
+ndf: 64
+ngf: 64
+ngpu: 1
+niter: 20
+nz: 100
+outf: ./output
+phase: train
+print_freq: 100
+proportion: 0.1
+resume: 
+save_image_freq: 100
+save_test_images: False
+test_batch_size: 64
+test_path: ./data/PV/n_test
+tih: 64
+tiw: 64
+train_path: ./data/PV/train
+w_bce: 1
+w_enc: 1
+w_rec: 50
+workers: 8
+-------------- End ----------------
